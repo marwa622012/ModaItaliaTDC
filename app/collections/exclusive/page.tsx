@@ -63,7 +63,7 @@ export const  exclusiveCatalogs: Catalog[] = [
   },
 ];
 
-export default function kidsPage() {
+export default function exclusivePage() {
   return (
     <CategoryCatalogGrid
       categorySlug="exclusive"

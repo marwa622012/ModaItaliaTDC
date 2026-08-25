@@ -43,7 +43,6 @@ export default function HomePage() {
         <AnnouncementBar />
         <Header />
         <Hero />
-        {/* <LatestCollections /> */}
         <BrowseByCategory />
         <OurServices />
         <InternationalTradeFairs />
