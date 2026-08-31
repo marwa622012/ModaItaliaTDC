@@ -1,5 +1,5 @@
 import CategoryCatalogGrid, { Catalog } from "@/components/CategoryCatalogGrid";
-import { knittingCatalogs } from "@/lib/knittingcatalogs";
+import { knittingCatalogs } from "@/lib/knittingCatalogs";
 
 
 export default function kidsPage() {
