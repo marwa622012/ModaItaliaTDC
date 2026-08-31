@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import CatalogGallery from "@/components/CatalogGallery";
-// import { exclusiveCatalogs } from "../page";
 import { exclusiveCatalogs } from "@/lib/exclusiveCatalogs";
 
 interface PageProps {
