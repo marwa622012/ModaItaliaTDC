@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import CatalogGallery from "@/components/CatalogGallery";
-import { printsCatalogs } from "../page";
+import { printsCatalogs } from "@/lib/printsCatalogs";
 
 interface PageProps {
   params: { slug: string };

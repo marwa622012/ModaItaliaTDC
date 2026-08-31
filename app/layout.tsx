@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     default: "Moda Italia | Italian Textile Design & Fashion Collections",
     template: "%s | Moda Italia",
   },
+  icons: {
+    icon: "/images/moda-italia-logos/logo.jpeg",
+  },
   description:
     "Moda Italia connects fashion designers, brands and manufacturers with the finest Italian textile collections. Explore seasonal catalogues, sourcing services and international trade fair representation.",
   keywords: [
