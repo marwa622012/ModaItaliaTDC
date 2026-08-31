@@ -1,4 +1,3 @@
-
 import { notFound } from "next/navigation";
 import CatalogGallery from "@/components/CatalogGallery";
 import { knittingCatalogs } from "@/lib/knittingCatalogs";
