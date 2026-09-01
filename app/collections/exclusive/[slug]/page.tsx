@@ -32,7 +32,6 @@ export default function KidswearCatalogPage({ params }: PageProps) {
       categoryLabel="Exclisive"
       categorySlug="exclisive"
       catalogName={catalog.slug.replace(/-/g, " ")}
-      // season="Autumn / Winter"
       images={allImages}
     />
   );

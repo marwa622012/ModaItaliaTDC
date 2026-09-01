@@ -1,6 +1,8 @@
-import CategoryCatalogGrid, { Catalog } from "@/components/CategoryCatalogGrid";
+
+import CategoryCatalogGrid from "@/components/CategoryCatalogGrid";
 import { exclusiveCatalogs } from "@/lib/exclusiveCatalogs";
-export default function exclusivePage() {
+
+export default function ExclusivePage() {
   return (
     <CategoryCatalogGrid
       categorySlug="exclusive"
