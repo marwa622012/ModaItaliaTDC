@@ -9,9 +9,7 @@ export default function ShirtsPage() {
     <CategoryCatalogGrid
       categorySlug="shirts"
       categoryLabel="Shirts"
-      
-      // season="Autumn / Winter"
-      catalogs={shirtsCatalogs}
+            catalogs={shirtsCatalogs}
     />
   );
 }

@@ -8,7 +8,6 @@ export default function ShirtsPage() {
     <CategoryCatalogGrid
       categorySlug="prints"
       categoryLabel="prints"
-      // season="Autumn / Winter"
       catalogs={printsCatalogs}
     />
   );

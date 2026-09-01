@@ -1,7 +1,6 @@
 import CategoryCatalogGrid, { Catalog } from "@/components/CategoryCatalogGrid";
 import { kidsCatalogs } from "@/lib/kidsCatalogs";
 
-// export const  kidsCatalogs: Catalog[] = [
 //   {
 //     slug: "kids-youth",
 //     coverImage: "/images/Kidswear/1/converted_image.webp",

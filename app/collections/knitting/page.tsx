@@ -7,8 +7,6 @@ export default function kidsPage() {
     <CategoryCatalogGrid
       categorySlug="knitting"
       categoryLabel="knitting"
-      // season="Autumn / Winter "
-      // description="10 designs across ten catalogues, from classic tailoring to printed statement pieces."
       catalogs={knittingCatalogs}
     />
   );
