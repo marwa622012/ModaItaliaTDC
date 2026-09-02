@@ -9,31 +9,31 @@ const partners = [
     name: "Mede Bookstore",
     tagline: "Libreria della moda e del tessuto",
     href: "https://www.medesrl.it/en/meta-trend-milano-collections-spring-summer.html",
-    logo: "/images/download.png",
+    logo: "/images/partners/meda.png",
 },
 {
     name: "Italtex",
     tagline: "Tessuti Italiani dal 1946",
     href: "https://italtextrends.com/", 
-    logo: "/images/Logo-b_180x (1).avif",
+    logo: "/images/partners/Logo-b_180x (1).avif",
 },
 {
     name: "Progetto Stile",
     tagline: "Textile Design & Collections",
     href: "https://www.progettostile.net/", 
-    logo: "/images/LOGO PROGETTO STILE CARTA PAVONE.avif",
+    logo: "/images/partners/LOGO PROGETTO STILE CARTA PAVONE.avif",
 },
 {
     name: "modainfo",
     tagline: "Textile Design & Collections",
     href: "https://modeinfo.com/By-manufacturer/View/", 
-    logo: "/images/logo.png",
+    logo: "/images/partners/modainformation.png",
 },
 {
     name: "biellatextile",
     tagline: "Textile Design & Collections",
     href: "https://www.biellatextiletrend.com/", 
-    logo: "/images/1.avif",
+    logo: "/images/partners/1.avif",
 },
 ];
 /** ====== لحد هنا ====== */

@@ -20,7 +20,7 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b border-black/5 bg-white">
       <div className="max-w-content mx-auto flex items-center justify-between px-4 py-4 md:px-8">
         <Link href="/" className="flex flex-col leading-none">
-          <Image src="/images/logo.jpeg" alt="Logo" width={100} height={70} />
+          <Image src="/images/moda-italia-logos/logo.jpeg" alt="Logo" width={100} height={70} />
         </Link>
 
         <nav className="hidden items-center gap-8 text-sm font-medium text-[#111111] lg:flex">

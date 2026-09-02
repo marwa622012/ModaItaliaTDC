@@ -68,7 +68,7 @@ const exhibitionNetwork: {
     country: "Spain",
     slug: "spain",
     organizer: "Meridian",
-    image: "/images/spain/f8f9b662-e0c8-4baa-a3fd-1dce8ab17636.jfif",
+    image: "/images/spain/WhatsApp Image 2026-08-13 at 3.29.59 PM (1).jpeg",
     exhibitions: ["Barcelona Textile Expo"],
   },
   {
