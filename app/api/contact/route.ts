@@ -1,13 +1,26 @@
+
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 
 const TO_EMAIL = "marwaali.n2012@gmail.com";
 
 export async function POST(req: NextRequest) {
   try {
+    // ننشئ الـ Resend client هنا جوه الفانكشن، مش في أعلى الملف،
+    // عشان الملف متيتنفذش وقت الـ build نفسه (Collecting page data)
+    // ويحاول يقرا process.env.RESEND_API_KEY في وقت غير مناسب.
+    const apiKey = process.env.RESEND_API_KEY;
+
+    if (!apiKey) {
+      console.error("RESEND_API_KEY is not set.");
+      return NextResponse.json(
+        { error: "Email service is not configured." },
+        { status: 500 }
+      );
+    }
+
+    const resend = new Resend(apiKey);
+
     const body = await req.json();
     const { name, email, company, topic, message } = body;
 
