@@ -17,32 +17,26 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://modaitalia.example.com"),
+  metadataBase: new URL("https://modaitaliatdc.vercel.app"),
   title: {
-    default: "Moda Italia | Italian Textile Design & Fashion Collections",
-    template: "%s | Moda Italia",
+    default: "Moda Italia TDC | Fashion & Textile Agency in Egypt",
+    template: "%s | Moda Italia TDC",
   },
+  description:
+    "Moda Italia TDC connects fashion brands and manufacturers with Italian and German textile designs, Egyptian mills and garment factories, and an international trade fair network.",
   icons: {
     icon: "/images/moda-italia-logos/logo.jpeg",
   },
-  description:
-    "Moda Italia connects fashion designers, brands and manufacturers with the finest Italian textile collections. Explore seasonal catalogues, sourcing services and international trade fair representation.",
-  keywords: [
-    "Italian textile design",
-    "fashion collections",
-    "textile manufacturers",
-    "garment sourcing",
-    "trade fairs Italy",
-    "Moda Italia",
-  ],
   openGraph: {
-    title: "Moda Italia | Italian Textile Design & Fashion Collections",
+    title: "Moda Italia TDC | Fashion & Textile Agency in Egypt",
     description:
       "Inspiring fashion, connecting manufacturers worldwide. Discover Moda Italia's latest collections and services.",
-    url: "https://modaitalia.example.com",
-    siteName: "Moda Italia",
+    siteName: "Moda Italia TDC",
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
   },
   robots: {
     index: true,

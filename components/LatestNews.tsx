@@ -4,7 +4,7 @@ import Link from "next/link";
 const posts = [
   {
     // date: "May 28, 2026",
-    title: "Saudia Fashion Trends for Autumn / Winter 2026–2027",
+    title: "Saudi Fashion Trends for Autumn / Winter 2026–2027",
     slug: "saudi-fashion-tex-2026",
     image: "/images/saudi-trade-fair/WhatsApp Image 2026-08-12 at 7.16.52 PM.jpeg",
   },

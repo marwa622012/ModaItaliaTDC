@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Company Profile | Moda Italia TDC",
+  title: "Company Profile",
   description:
     "Moda Italia TDC — connecting fashion, design and manufacturing between Europe and Egypt since 2015.",
 };
@@ -564,7 +564,7 @@ export default function CompanyProfilePage() {
                 Founder &amp; Business Development Consultant
               </p>
               <p className="text-sm text-brand-black/70">
-                heba.modaitalia@yahoo.com · +20 128 669 3375 · Obour City,
+                heba.modaitalia@yahoo.com · +2 01286693375 · Obour City,
                 Cairo, Egypt
               </p>
             </div>

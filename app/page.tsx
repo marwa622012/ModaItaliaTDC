@@ -10,35 +10,36 @@ import LatestNews from "@/components/LatestNews";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
 
-
 export default function HomePage() {
   const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Moda Italia",
-    url: "https://modaitalia.example.com",
-    description:
-      "Moda Italia connects fashion designers, brands and manufacturers with the finest Italian textile collections.",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Via Tortona 37",
-      postalCode: "20144",
-      addressLocality: "Milano",
-      addressCountry: "IT",
-    },
-    telephone: "+39 02 1234 5678",
-    email: "info@modaitalia.com",
-  };
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Moda Italia TDC",
+  url: "https://modaitaliatdc.vercel.app",
+  logo: "https://modaitaliatdc.vercel.app/images/logo-removebg-preview.png",
+  description:
+    "Fashion and textile agency connecting Egyptian manufacturers with Italian and German textile designers, sourcing, product development and an international trade fair network.",
+  foundingDate: "2015",
+  address: {
+    "@type": "PostalAddress",
+    // streetAddress: "6 El Sheikh Mohamed Salama St, El Hejaz St",
+    addressLocality: "Heliopolis, Cairo",
+    addressCountry: "EG",
+  },
+  telephone: "+201286693375",
+  email: "heba.modaitalia@yahoo.com",
+};
 
   return (
+
     <>
-    
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        
+
       />
-      
+
       <main>
         <AnnouncementBar />
         <Header />

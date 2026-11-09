@@ -16,7 +16,8 @@ const columns = [
       { name: "Shirts", href: "/collections/shirts" },
       { name: "Trousers", href: "/collections/trousers" },
       { name: "Suits", href: "/collections/suits" },
-      { name: "Knitwear", href: "/collections/knitting" },
+      { name: "Knitting", href: "/collections/knitting" },
+      { name: "Sportwear", href: "/collections/sportswear" },
       { name: "Womenswear", href: "/collections/womenswear" },
       { name: "Menswear", href: "/collections/menswear" },
       { name: "Kidswear", href: "/collections/kidswear" },
@@ -59,7 +60,7 @@ const partners = [
     size: 50,
   },
   {
-    name: "moda information",
+    name: "mode info",
     tagline: "Textile Design & Collections",
     href: "https://modeinfo.com/By-manufacturer/View/",
     logo: "/images/partners/modainformation.png",
@@ -69,7 +70,7 @@ const partners = [
     name: "biellatextiletrend",
     tagline: "Textile Design & Collections",
     href: "https://www.biellatextiletrend.com/",
-    logo: "/public/images/partners/1.avif",
+    logo: "/images/partners/1.avif",
     size: 44,
   },
 ];
@@ -80,7 +81,7 @@ export default function Footer() {
       <div className="max-w-content mx-auto px-4 md:px-8 py-16 grid sm:grid-cols-2 lg:grid-cols-[1.4fr_1.2fr_1.3fr_0.9fr_0.9fr_1.1fr] gap-10">
         <div>
           <Image
-            src="/images/logo-removebg-preview.png"
+            src="/images/moda-italia-logos/logo-removebg-preview.png"
             alt="Moda Italia Logo"
             width={70}
             height={70}
@@ -127,7 +128,7 @@ export default function Footer() {
           <p className="font-medium mb-4">Contact Us</p>
           <ul className="space-y-3 text-sm text-white/60">
             <li className="flex items-center gap-2">
-              <span aria-hidden>📞</span> +20 12 86693375
+              <span aria-hidden>📞</span> +2 01286693375
             </li>
             <li className="flex items-center gap-2">
               <span aria-hidden>✉️</span>heba.modaitalia@yahoo.com
@@ -135,8 +136,7 @@ export default function Footer() {
             <li className="flex items-start gap-2">
               <span aria-hidden>📍</span>
               <span>
-                6 El sheiekh Mohamed Salama St, <br />
-                El Hejaz St, Heliopolis, Cairo
+                Obour City, Cairo
               </span>
             </li>
           </ul>

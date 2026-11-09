@@ -24,7 +24,7 @@ const partners = [
     logo: "/images/partners/LOGO PROGETTO STILE CARTA PAVONE.avif",
 },
 {
-    name: "modainfo",
+    name: "modeinfo",
     tagline: "Textile Design & Collections",
     href: "https://modeinfo.com/By-manufacturer/View/", 
     logo: "/images/partners/modainformation.png",

@@ -129,8 +129,8 @@ export default function Contact() {
                       Participate in a Fair
                     </option>
                     <option value="trade-fairs">Trend book</option>
-                    <option value="press">Exclusive collection.</option>
-                    <option value="other">Brand Development.</option>
+                    <option value="press">Exclusive collection</option>
+                    <option value="other">Brand Development</option>
                   </select>
                 </Field>
 
@@ -169,21 +169,19 @@ export default function Contact() {
             Studio
             </p> */}
               <p className="mt-3 font-serif text-lg text-brand-black">
-                6 El sheiekh Mohamed Salama St,
-                <br />
-                El Hejaz St, Heliopolis, Cairo
+                Obour City, Cairo
               </p>
             </div>
 
             <div className="flex flex-col gap-2">
               <a
-                href="mailto:info@modaitalia.com"
+                href="mailto:heba.modaitalia@yahoo.com"
                 className="text-sm font-medium text-brand-black hover:text-brand-orange"
               >
                 heba.modaitalia@yahoo.com
               </a>
               <a
-                href="tel:+390212345678"
+                href="tel:+201286693375"
                 className="text-sm font-medium text-brand-black hover:text-brand-orange"
               >
                 +20 12 86693375

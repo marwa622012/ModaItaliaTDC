@@ -140,7 +140,6 @@ export default function SourcingProfile() {
             </h1>
             <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-brand-black/60">
               Independent sourcing agency based in Egypt, founded and managed by Heba Ahmad
-              Mahmoud
             </p>
           </div>
         </FadeIn>

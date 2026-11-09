@@ -56,7 +56,7 @@ const exhibitions: Exhibition[] = [
     location: "Jeddah, Saudi Arabia",
     description:
       "The premier fashion and textile event in Saudi Arabia, connecting the Middle Eastern market with global suppliers and manufacturers.",
-    flyerImage: "/images/saudi2.png",
+    flyerImage: "/images/saudi-trade-fair/2025/saudi2.png",
     flyerPdf: "/assets/FLYER_ SFTE (1).pdf",
   },
   {
@@ -162,7 +162,7 @@ export default function ExhibitionPartners() {
               Who we are
             </h3>
             <p className="text-center text-[15px] leading-relaxed text-brand-black/70">
-              At Moda Italia, we believe in the power of global visibility and strategic
+              At Moda Italia TDC, we believe in the power of global visibility and strategic
               networking. That&rsquo;s why we proudly collaborate with leading international
               textile and fashion trade shows, offering our clients exceptional opportunities to
               expand their reach and showcase their products to targeted buyers and industry
