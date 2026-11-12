@@ -29,7 +29,7 @@ export const newsItems: NewsItem[] = [
     location: "OFEC Casablanca International Fairground",
     organizer: "Pyramids Group",
     externalLink: "https://www.moroccofashiontex.net",
-        brochurePdf: "/brochure/saudi-fashion-tex.pdf",
+        // brochurePdf: "/public/assets/FAST TEXTILE A4 -ENG 0 (2).pdf",
 
     summary: "Join the heart of Africa's fashion & textile industry in Casablanca.",
   },

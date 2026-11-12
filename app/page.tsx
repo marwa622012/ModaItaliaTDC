@@ -41,7 +41,7 @@ export default function HomePage() {
       />
 
       <main>
-        <AnnouncementBar />
+        {/* <AnnouncementBar /> */}
         <Header />
         <Hero />
         <BrowseByCategory />

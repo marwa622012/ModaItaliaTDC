@@ -17,7 +17,7 @@ const columns = [
       { name: "Trousers", href: "/collections/trousers" },
       { name: "Suits", href: "/collections/suits" },
       { name: "Knitting", href: "/collections/knitting" },
-      { name: "Sportwear", href: "/collections/sportswear" },
+      { name: "Sportswear", href: "/collections/sportswear" },
       { name: "Womenswear", href: "/collections/womenswear" },
       { name: "Menswear", href: "/collections/menswear" },
       { name: "Kidswear", href: "/collections/kidswear" },
@@ -128,7 +128,7 @@ export default function Footer() {
           <p className="font-medium mb-4">Contact Us</p>
           <ul className="space-y-3 text-sm text-white/60">
             <li className="flex items-center gap-2">
-              <span aria-hidden>📞</span> +2 01286693375
+              <span aria-hidden>📞</span> +20 1286693375
             </li>
             <li className="flex items-center gap-2">
               <span aria-hidden>✉️</span>heba.modaitalia@yahoo.com

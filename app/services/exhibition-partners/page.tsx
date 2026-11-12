@@ -56,7 +56,7 @@ const exhibitions: Exhibition[] = [
     location: "Jeddah, Saudi Arabia",
     description:
       "The premier fashion and textile event in Saudi Arabia, connecting the Middle Eastern market with global suppliers and manufacturers.",
-    flyerImage: "/images/saudi-trade-fair/2025/saudi2.png",
+    flyerImage: "/images/saudi-trade-fair/e9f6ee6b-20ca-48eb-8ff4-ce67db1e40b7.jfif",
     flyerPdf: "/assets/FLYER_ SFTE (1).pdf",
   },
   {
@@ -64,7 +64,7 @@ const exhibitions: Exhibition[] = [
     location: "Poland",
     description:
       "The largest textile fair in Central and Eastern Europe, focused on sourcing, innovation, and B2B connections.",
-    flyerImage: "/images/0ed2b7b7-a2af-4c60-ad4e-9e832ed6ea0e.jpeg",
+    flyerImage: "/images/trade fairs/ptak.jpeg",
     flyerPdf: "/assets/FAST TEXTILE A4 -ENG 0 (2).pdf",
   },
   {
@@ -72,7 +72,7 @@ const exhibitions: Exhibition[] = [
     location: "Also known as Trends Expo",
     description:
       "A key event dedicated to trend forecasting and fashion innovation, bringing together creative visionaries, fabric specialists, and global buyers.",
-    flyerImage: "/images/exhibitions/trends-expo.jpg",
+    flyerImage: "/images/trade fairs/gallery-1.jpg",
   },
 ];
 
