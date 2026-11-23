@@ -23,7 +23,7 @@ export default function HomePage() {
   address: {
     "@type": "PostalAddress",
     // streetAddress: "6 El Sheikh Mohamed Salama St, El Hejaz St",
-    addressLocality: "Heliopolis, Cairo",
+    addressLocality: "Obour City, Cairo",
     addressCountry: "EG",
   },
   telephone: "+201286693375",

@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { useRouter, useSearchParams } from "next/navigation";
 
 type Organizer = "PTAK" | "Intertex" | "Meridian" | "Pyramids";
-
 
 const organizerStyle: Record<Organizer, { bg: string; label: string; logo: string }> = {
   PTAK: { bg: "#0B1F3A", label: "PTAK Warsaw Expo", logo: "/images/trade fairs/ptak.jpeg" },
@@ -42,7 +42,6 @@ const fairs = [
     image: "/images/trade fairs/safex-1.jpg",
     exhibitions: ["Alger Textile — International Textile Exhibition"],
   },
-  
   {
     country: "Saudi Arabia",
     slug: "saudi-arabia",
@@ -67,8 +66,19 @@ const fairs = [
 ];
 
 export default function TradeFairsTabs() {
-  const [activeCountry, setActiveCountry] = useState<string>("all");
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const [brokenImages, setBrokenImages] = useState<Set<string>>(new Set());
+
+  // الدولة النشطة تيجي من الرابط (?country=poland)، ولو القيمة مش معروفة نعرض الكل
+  const param = searchParams.get("country");
+  const activeCountry = fairs.some((f) => f.slug === param) ? (param as string) : "all";
+
+  function selectCountry(slug: string) {
+    router.replace(slug === "all" ? "/trade-fairs" : `/trade-fairs?country=${slug}`, {
+      scroll: false,
+    });
+  }
 
   const filtered =
     activeCountry === "all" ? fairs : fairs.filter((f) => f.slug === activeCountry);
@@ -91,7 +101,9 @@ export default function TradeFairsTabs() {
 
         <div className="flex flex-wrap gap-2 mb-12 border-b border-brand-black/10 pb-6">
           <button
-            onClick={() => setActiveCountry("all")}
+            type="button"
+            aria-pressed={activeCountry === "all"}
+            onClick={() => selectCountry("all")}
             className={`px-4 py-2 text-sm rounded-full border transition-colors ${
               activeCountry === "all"
                 ? "bg-brand-black text-white border-brand-black"
@@ -103,7 +115,9 @@ export default function TradeFairsTabs() {
           {fairs.map((f) => (
             <button
               key={f.slug}
-              onClick={() => setActiveCountry(f.slug)}
+              type="button"
+              aria-pressed={activeCountry === f.slug}
+              onClick={() => selectCountry(f.slug)}
               className={`px-4 py-2 text-sm rounded-full border transition-colors ${
                 activeCountry === f.slug
                   ? "bg-brand-black text-white border-brand-black"
@@ -139,19 +153,15 @@ export default function TradeFairsTabs() {
                     />
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                  {/* <span
-                    className="absolute top-3 left-3 text-[10px] font-semibold tracking-wide px-2 py-1 rounded-sm text-white"
-                    style={{ backgroundColor: style.bg }}
-                  >
-                    {style.label}
-                  </span> */}
-                    <Image
-                        src={style.logo}
-                        alt={style.label}
-                        width={80}
-                        height={28}
-                        className="h-5 w-auto object-contain absolute"
-                      />
+
+                  <Image
+                    src={style.logo}
+                    alt={style.label}
+                    width={80}
+                    height={28}
+                    className="absolute left-3 top-3 h-5 w-auto object-contain"
+                  />
+
                   <p className="absolute bottom-3 left-3 font-serif text-lg text-white">
                     {item.country}
                   </p>

@@ -5,52 +5,52 @@ const categories = [
   {
     name: "Menswear",
     slug: "menswear",
-    image: "/images/trends&books/menswear.webp",
+    image: "/images/trends-books/menswear.webp",
   },
   {
     name: "Womenswear",
     slug: "womenswear",
-    image: "/images/trends&books/womenwear.jpeg",
+    image: "/images/trends-books/womenwear.jpeg",
   },
   {
     name: "Sportswear",
     slug: "sportswear",
-    image: "/images/trends&books/sport.webp",
+    image: "/images/trends-books/sport.webp",
   },
   {
     name: "Kidswear",
     slug: "kidswear",
-    image: "/images/trends&books/kids (2).webp",
+    image: "/images/trends-books/kids (2).webp",
   },
   {
     name: "Knitting",
     slug: "knitting",
-    image: "/images/trends&books/knitting.jpeg",
+    image: "/images/trends-books/knitting.jpeg",
   },
   {
     name: "Trousers",
     slug: "trousers",
-    image: "/images/trends&books/trouser.jpeg",
+    image: "/images/trends-books/trouser.jpeg",
   },
   {
     name: "Prints",
     slug: "prints",
-    image: "/images/trends&books/print.webp",
+    image: "/images/trends-books/print.webp",
   },
   {
     name: "Shirts",
     slug: "shirts",
-    image: "/images/trends&books/shirts.jpeg",
+    image: "/images/trends-books/shirts.jpeg",
   },
   {
     name: "Suits",
     slug: "suits",
-    image: "/images/trends&books/suits.jpeg",
+    image: "/images/trends-books/suits.jpeg",
   },
   {
     name: "Exclusive",
     slug: "exclusive",
-    image: "/images/trends&books/exclusive.jpeg",
+    image: "/images/trends-books/exclusive.jpeg",
   },
 ];
 

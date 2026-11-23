@@ -41,66 +41,48 @@ const exhibitionNetwork: {
   slug: string;
   organizer: Organizer;
   image: string;
-  exhibitions: string[];
 }[] = [
   {
     country: "Poland",
     slug: "poland",
     organizer: "PTAK",
     image: "/images/trade fairs/polandexpo.jpeg",
-    exhibitions: [
-      "Trends Expo — August Edition",
-      "Fast Textile — November Edition",
-      "Fast Textile — March Edition",
-    ],
   },
   {
     country: "Italy",
     slug: "italy",
     organizer: "Intertex",
     image: "/images/italy trade fair/71959217-7f28-4fa0-aa88-87357a61016a.jfif",
-    exhibitions: [
-      "Intertex Milano — Twice per Year",
-      "Ready to Show — Rho Fiera Milano",
-    ],
   },
   {
     country: "Spain",
     slug: "spain",
     organizer: "Meridian",
     image: "/images/spain/WhatsApp Image 2026-08-13 at 3.29.59 PM (1).jpeg",
-    exhibitions: ["Barcelona Textile Expo"],
   },
   {
     country: "Algeria",
     slug: "algeria",
     organizer: "Meridian",
     image: "/images/trade fairs/safex-1.jpg",
-    exhibitions: ["Alger Textile — International Textile Exhibition"],
   },
-
   {
     country: "Saudi Arabia",
     slug: "saudi-arabia",
     organizer: "Pyramids",
     image: "/images/trade fairs/saudiatradefair.jpeg",
-    exhibitions: ["Saudi Fashion & Tex Expo — Fashion, Textiles, Machinery"],
   },
   {
     country: "Morocco",
     slug: "morocco",
     organizer: "Pyramids",
     image: "/images/trade fairs/3cc539b9-ef27-4513-be68-08064655495c.jpg",
-    exhibitions: [
-      "Morocco Fashion Style & Tex — International Fashion & Textile Exhibition",
-    ],
   },
   {
     country: "Syria",
     slug: "syria",
     organizer: "Meridian",
     image: "/images/syria/2-2.jpg",
-    exhibitions: ["Textile Expo Syria — International Textile Exhibition"],
   },
 ];
 
@@ -127,6 +109,7 @@ export default function InternationalTradeFairs() {
           </div>
 
           <button
+            type="button"
             aria-label={isPaused ? "Resume scrolling" : "Pause scrolling"}
             onClick={() => setIsPaused((p) => !p)}
             className="hidden sm:flex w-9 h-9 rounded-full border border-white/20 items-center justify-center hover:bg-white hover:text-brand-black transition-colors"
@@ -141,21 +124,24 @@ export default function InternationalTradeFairs() {
 
           <div
             className="flex gap-6 w-max marquee-track"
-            style={{
-              animationPlayState: isPaused ? "paused" : "running",
-            }}
+            style={{ animationPlayState: isPaused ? "paused" : "running" }}
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
+            onFocus={() => setIsPaused(true)}
+            onBlur={() => setIsPaused(false)}
           >
             {marqueeItems.map((item, idx) => {
               const style = organizerStyle[item.organizer];
               const imageKey = `${item.slug}-${idx}`;
               const imageFailed = brokenImages.has(imageKey);
+              const isCopy = idx >= exhibitionNetwork.length;
 
               return (
                 <Link
                   key={imageKey}
-                  href={`/trade-fairs/${item.slug}`}
+                  href={`/trade-fairs?country=${item.slug}`}
+                  aria-hidden={isCopy || undefined}
+                  tabIndex={isCopy ? -1 : undefined}
                   className="shrink-0 w-64 sm:w-60 group"
                 >
                   <div className="relative aspect-[4/3] rounded-sm overflow-hidden mb-4">
@@ -202,24 +188,9 @@ export default function InternationalTradeFairs() {
                     )}
 
                     <div className="absolute bottom-3 left-3 flex items-center gap-2">
-                      <p className="font-serif text-lg text-white">
-                        {item.country}
-                      </p>
+                      <p className="font-serif text-lg text-white">{item.country}</p>
                     </div>
                   </div>
-
-                  {/* <ul className="text-sm text-white/60 space-y-1">
-                    {item.exhibitions.slice(0, 2).map((ex) => (
-                      <li key={ex} className="truncate">
-                        • {ex}
-                      </li>
-                    ))}
-                    {item.exhibitions.length > 2 && (
-                      <li className="text-brand-orange text-xs">
-                        +{item.exhibitions.length - 2} more
-                      </li>
-                    )}
-                  </ul> */}
                 </Link>
               );
             })}
@@ -238,6 +209,11 @@ export default function InternationalTradeFairs() {
         }
         .marquee-track {
           animation: marquee-scroll 40s linear infinite;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .marquee-track {
+            animation: none;
+          }
         }
       `}</style>
     </section>

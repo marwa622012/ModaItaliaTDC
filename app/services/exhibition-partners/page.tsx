@@ -1,46 +1,19 @@
-"use client";
-
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
+import { Check, Download } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FadeIn from "@/components/FadeIn";
 
-// ---- Scroll fade-in wrapper -----------------------------------------------
+export const metadata: Metadata = {
+  title: "International Exhibition Partnerships",
+  description:
+    "Moda Italia TDC collaborates with leading international textile and fashion trade shows, giving clients visibility with targeted buyers and industry professionals.",
+  alternates: { canonical: "/services/exhibition-partners" },
+};
 
-function FadeIn({ children, delay = 0 }: { children: ReactNode; delay?: number }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const node = ref.current;
-    if (!node) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.15 }
-    );
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <div
-      ref={ref}
-      style={{ transitionDelay: `${delay}ms` }}
-      className={`transition-all duration-700 ease-out ${
-        visible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-      }`}
-    >
-      {children}
-    </div>
-  );
-}
-
-// ---- Data --------------------------------------------------------------
+// ---- Data -------------------------------------------------------------
 
 type Exhibition = {
   name: string;
@@ -69,9 +42,9 @@ const exhibitions: Exhibition[] = [
   },
   {
     name: "International Apparel Trend Expo",
-    location: "Also known as Trends Expo",
+    location: "Poland",
     description:
-      "A key event dedicated to trend forecasting and fashion innovation, bringing together creative visionaries, fabric specialists, and global buyers.",
+      "Also known as Trends Expo. A key event dedicated to trend forecasting and fashion innovation, bringing together creative visionaries, fabric specialists, and global buyers.",
     flyerImage: "/images/trade fairs/gallery-1.jpg",
   },
 ];
@@ -83,9 +56,17 @@ const offerings = [
   "Assistance with booth reservation, setup, and targeted promotion",
 ];
 
-// ---- Row (image + text, alternating) ---------------------------------------
+// ---- Row (image + text, alternating) -----------------------------------
 
-function ExhibitionRow({ item, reverse, delay }: { item: Exhibition; reverse: boolean; delay: number }) {
+function ExhibitionRow({
+  item,
+  reverse,
+  delay,
+}: {
+  item: Exhibition;
+  reverse: boolean;
+  delay: number;
+}) {
   return (
     <FadeIn delay={delay}>
       <div
@@ -118,7 +99,7 @@ function ExhibitionRow({ item, reverse, delay }: { item: Exhibition; reverse: bo
               download
               className="inline-flex items-center gap-2 rounded-sm border border-brand-black/15 px-4 py-2 text-sm font-medium text-brand-black transition-colors hover:border-brand-orange hover:text-brand-orange"
             >
-              Download 
+              Download flyer (PDF) <Download size={14} aria-hidden="true" />
             </a>
           ) : (
             <span className="inline-block rounded-sm border border-brand-black/10 px-4 py-2 text-sm text-brand-black/40">
@@ -131,87 +112,92 @@ function ExhibitionRow({ item, reverse, delay }: { item: Exhibition; reverse: bo
   );
 }
 
-// ---- Page -------------------------------------------------------------------
+// ---- Page ----------------------------------------------------------------
 
 export default function ExhibitionPartners() {
   return (
     <>
-    <Header />
-    <div className="bg-white">
-      <div className="mx-auto max-w-2xl px-6 py-16 md:px-8 md:py-16">
-        {/* Hero */}
-        <FadeIn>
-          <div className="mb-4 text-center">
-            <p className="mb-3 text-xs font-medium tracking-[0.15em] text-brand-orange">
-              SERVICES
-            </p>
-            <h1 className="font-serif text-3xl font-semibold text-brand-black md:text-4xl">
-              International exhibition partnerships
-            </h1>
-            <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-brand-black/60">
-              We collaborate with leading international textile and fashion trade shows, giving
-              our clients exceptional visibility with targeted buyers and industry professionals.
-            </p>
-          </div>
-        </FadeIn>
-
-        {/* Who we are */}
-        <FadeIn delay={60}>
-          <div className="mx-auto mt-8 max-w-xl">
-            <h3 className="mb-3 text-center font-serif text-xl font-semibold text-brand-black">
-              Who we are
-            </h3>
-            <p className="text-center text-[15px] leading-relaxed text-brand-black/70">
-              At Moda Italia TDC, we believe in the power of global visibility and strategic
-              networking. That&rsquo;s why we proudly collaborate with leading international
-              textile and fashion trade shows, offering our clients exceptional opportunities to
-              expand their reach and showcase their products to targeted buyers and industry
-              professionals.
-            </p>
-            <p className="mt-4 text-center text-sm font-medium text-brand-black/80">
-              We are official partners of renowned international exhibitions such as:
-            </p>
-          </div>
-        </FadeIn>
-
-        {/* Alternating exhibition rows */}
-        <div className="mt-4">
-          {exhibitions.map((item, i) => (
-            <ExhibitionRow key={item.name} item={item} reverse={i % 2 === 1} delay={i * 100} />
-          ))}
-        </div>
-
-        {/* What we offer */}
-        <FadeIn delay={exhibitions.length * 100}>
-          <div className="mt-14 border-t border-black/5 pt-10">
-            <h3 className="mb-5 text-center font-serif text-xl font-semibold text-brand-black">
-              Through these partnerships, we offer
-            </h3>
-            <div className="mx-auto grid max-w-lg grid-cols-1 gap-3 sm:grid-cols-2">
-              {offerings.map((point) => (
-                <div key={point} className="flex items-start gap-2">
-                  <span className="mt-0.5 text-brand-orange">✓</span>
-                  <p className="text-sm leading-relaxed text-brand-black/75">{point}</p>
-                </div>
-              ))}
+      <Header />
+      <main className="bg-white">
+        <div className="mx-auto max-w-2xl px-6 py-16 md:px-8">
+          {/* Hero */}
+          <FadeIn>
+            <div className="mb-4 text-center">
+              <p className="mb-3 text-xs font-medium tracking-[0.15em] text-brand-orange">
+                SERVICES
+              </p>
+              <h1 className="font-serif text-3xl font-semibold text-brand-black md:text-4xl">
+                International exhibition partnerships
+              </h1>
+              <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-brand-black/60">
+                We collaborate with leading international textile and fashion trade shows, giving
+                our clients exceptional visibility with targeted buyers and industry professionals.
+              </p>
             </div>
-          </div>
-        </FadeIn>
+          </FadeIn>
 
-        {/* CTA */}
-        <FadeIn delay={exhibitions.length * 100 + 60}>
-          <div className="mt-10 text-center">
-            <a
-              href="/contact"
-              className="inline-block rounded-sm bg-brand-black px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-black/80"
-            >
-              Join us on the global stage
-            </a>
+          {/* Who we are */}
+          <FadeIn delay={60}>
+            <div className="mx-auto mt-8 max-w-xl">
+              <h2 className="mb-3 text-center font-serif text-xl font-semibold text-brand-black">
+                Who we are
+              </h2>
+              <p className="text-center text-[15px] leading-relaxed text-brand-black/70">
+                At Moda Italia TDC, we believe in the power of global visibility and strategic
+                networking. That&rsquo;s why we proudly collaborate with leading international
+                textile and fashion trade shows, offering our clients exceptional opportunities to
+                expand their reach and showcase their products to targeted buyers and industry
+                professionals.
+              </p>
+              <p className="mt-4 text-center text-sm font-medium text-brand-black/80">
+                We are official partners of renowned international exhibitions such as:
+              </p>
+            </div>
+          </FadeIn>
+
+          {/* Alternating exhibition rows */}
+          <div className="mt-4">
+            {exhibitions.map((item, i) => (
+              <ExhibitionRow key={item.name} item={item} reverse={i % 2 === 1} delay={i * 100} />
+            ))}
           </div>
-        </FadeIn>
-      </div>
-    </div>
-    <Footer />
+
+          {/* What we offer */}
+          <FadeIn delay={exhibitions.length * 100}>
+            <div className="mt-14 border-t border-black/5 pt-10">
+              <h2 className="mb-5 text-center font-serif text-xl font-semibold text-brand-black">
+                Through these partnerships, we offer
+              </h2>
+              <div className="mx-auto grid max-w-lg grid-cols-1 gap-3 sm:grid-cols-2">
+                {offerings.map((point) => (
+                  <div key={point} className="flex items-start gap-2">
+                    <Check
+                      size={16}
+                      strokeWidth={2.5}
+                      className="mt-0.5 shrink-0 text-brand-orange"
+                      aria-hidden="true"
+                    />
+                    <p className="text-sm leading-relaxed text-brand-black/75">{point}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+
+          {/* CTA */}
+          <FadeIn delay={exhibitions.length * 100 + 60}>
+            <div className="mt-10 text-center">
+              <Link
+                href="/contact"
+                className="inline-block rounded-sm bg-brand-black px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-black/80"
+              >
+                Join us on the global stage
+              </Link>
+            </div>
+          </FadeIn>
+        </div>
+      </main>
+      <Footer />
     </>
   );
 }

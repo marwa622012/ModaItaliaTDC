@@ -48,7 +48,7 @@ export const exclusiveCatalogs: Catalog[] = [
   },
   {
     slug: "exclusive",
-    coverImage: "/images/Exclusive book/b2d21587-8828-4197-aexclusivea7d-800ecd008d3b.webp",
+    coverImage: "/images/Exclusive book/b2d21587-8828-4197-aa7d-800ecd008d3b.webp",
   },
   {
     slug: "exclusive",

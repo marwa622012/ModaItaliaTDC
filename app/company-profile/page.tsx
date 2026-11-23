@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Company Profile",
   description:
     "Moda Italia TDC — connecting fashion, design and manufacturing between Europe and Egypt since 2015.",
+    alternates: { canonical: "/company-profile" },
 };
 
 const services = [
@@ -149,7 +150,8 @@ const network = [
     advantages: [
       "Strong access to apparel buyers and brand owners",
       "Designed for wholesale and sourcing relationships",
-      "Approx. 3,000 visitors daily with a professionally profiled trade audience",
+      "Approx. 3,000 visitors daily according to the organizer, with a professionally profiled trade audience",
+
     ],
     stat: { value: "3,000", label: "visitors daily" },
   },
@@ -175,7 +177,7 @@ const network = [
     advantages: [
       "Focused platform for fabric and yarn sourcing",
       "Strong fit for mills, fabric suppliers and textile producers",
-      "3,500+ visitors daily, with a visitor profile strongly focused on fabric importers",
+      "3,500+ visitors daily according to the organizer, with a visitor profile strongly focused on fabric importers",
     ],
     stat: { value: "3,500+", label: "visitors daily" },
   },
@@ -197,7 +199,7 @@ const network = [
     name: "Ready to Show",
     tag: "Apparel • Knitwear • Textiles • Sourcing",
     detail:
-      "A professional contract clothing and sourcing exhibition connecting international manufacturers with Italian and European buyers, importers, private-label companies and retailers. The 2026 edition runs September 12–14 at Fiera Milano Rho.",
+  "A professional contract clothing and sourcing exhibition connecting international manufacturers with Italian and European buyers, importers, private-label companies and retailers. The 2026 edition took place on September 12–14 at Fiera Milano Rho.",
     advantages: [
       "Direct access to Italian and European buyers",
       "Strong fit for garment manufacturers, knitwear producers and textile suppliers",
@@ -309,12 +311,14 @@ const whyUs = [
 
 export default function CompanyProfilePage() {
   return (
-    <main className="bg-brand-cream text-brand-black">
+    <div className="bg-brand-cream text-brand-black">
+          <Header />
+
+    <main >
       {/* NAVBAR */}
-      <Header />
 
       {/* RUNNING MASTHEAD */}
-      <div className="max-w-5xl mx-auto px-6 pt-10 flex items-center justify-between running">
+      <div id="services" className="max-w-5xl mx-auto px-6 pt-10 flex items-center justify-between running">
         <span>Company profile · Est. 2015</span>
         <span>Obour City, Cairo, Egypt</span>
       </div>
@@ -543,8 +547,7 @@ export default function CompanyProfilePage() {
             ))}
           </div>
           <p className="text-sm text-brand-black/70 leading-relaxed max-w-2xl mt-10">
-            We believe successful partnerships are built on trust,
-            professionalism, and long-term cooperation. Whether a client is
+            Whether a client is
             seeking design inspiration, sourcing solutions, manufacturing
             support, market-entry assistance, or international business
             opportunities, MODA ITALIA TDC is positioned to provide
@@ -564,9 +567,15 @@ export default function CompanyProfilePage() {
                 Founder &amp; Business Development Consultant
               </p>
               <p className="text-sm text-brand-black/70">
-                heba.modaitalia@yahoo.com · +2 01286693375 · Obour City,
-                Cairo, Egypt
-              </p>
+                  <a href="mailto:heba.modaitalia@yahoo.com" className="hover:text-brand-orange">
+                    heba.modaitalia@yahoo.com
+                  </a>
+                  {" · "}
+                  <a href="tel:+201286693375" className="hover:text-brand-orange">
+                    +20 128 669 3375
+                  </a>
+                  {" · "}Obour City, Cairo, Egypt
+                </p>
             </div>
             <a
               href="mailto:heba.modaitalia@yahoo.com"
@@ -582,7 +591,8 @@ export default function CompanyProfilePage() {
           </p>
         </div>
       </section>
-      <Footer />
     </main>
+          <Footer />
+              </div>
   );
 }

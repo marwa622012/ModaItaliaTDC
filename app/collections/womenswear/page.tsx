@@ -8,8 +8,6 @@ export default function womensweaPage() {
     <CategoryCatalogGrid
       categorySlug="womenswear"
       categoryLabel="womenswear"
-      // season=""
-      // description="53 designs across seven catalogues, from classic tailoring to printed statement pieces."
       catalogs={womenswearCatalogs}
     />
   );

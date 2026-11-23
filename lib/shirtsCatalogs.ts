@@ -2,8 +2,8 @@ import CategoryCatalogGrid, { Catalog } from "@/components/CategoryCatalogGrid";
 
 export const shirtsCatalogs: Catalog[] = [
   {
-    slug: "TEXTILEWORKSHOP",
-        catalogName: " TEXTILE WORK SHOP", 
+    slug: "textile-workshop",
+        catalogName: "Textile Workshop", 
     coverImage:
       "/images/shirts/shirt 6/12d9de_7215c24d775d4815bf542b6c07a04682~mv2.webp",
     images: [
@@ -12,8 +12,8 @@ export const shirtsCatalogs: Catalog[] = [
     ],
   },
   {
-    slug: "printidea",
-        catalogName: "PRINTIDEA", 
+    slug: "print-idea",
+        catalogName: "Print Idea", 
 
     coverImage:
       "/images/shirts/shirt 7/12d9de_64844673133547baa4990e77f886af39~mv2.webp",
