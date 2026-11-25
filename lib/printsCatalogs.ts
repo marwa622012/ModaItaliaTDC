@@ -2,20 +2,21 @@ import CategoryCatalogGrid, { Catalog } from "@/components/CategoryCatalogGrid";
 
 export const printsCatalogs: Catalog[] = [
   {
-    slug: "Majestie",
+    slug: "majestie",
     coverImage: "/images/Prints/1/pmtt16.webp",
     
   },
   {
-    slug: "prints-More",
+    slug: "prints-more",
     coverImage: "/images/Prints/2/pmtp1112.webp",
   },
   {
-    slug: "Simple-Nature",
+    slug: "simple-nature",
     coverImage: "/images/Prints/3/2sng01_mode_modeinformation_modeinfo.webp",
   },
   {
-    slug: "OUT-DOOR-STYLE",
+    slug: "out-door-style",
+    catalogName: "Outdoor Style",
     coverImage: "/images/Prints/4/2os02_mode_modeinformation_modeinfo.webp",
     images: [
       "/images/Prints/4/2os02_mode_modeinformation_modeinfo_1.webp",
@@ -25,7 +26,7 @@ export const printsCatalogs: Catalog[] = [
     ],
   },
   {
-    slug: "Natural-pop",
+    slug: "natural-pop",
     coverImage: "/images/Prints/5/203472_naturalpoptext02_p1.webp",
     images: [
       "/images/Prints/5/203472_offen01_p2.webp",
@@ -35,7 +36,7 @@ export const printsCatalogs: Catalog[] = [
     ],
   },
   {
-    slug: "Baby-Girl",
+    slug: "baby-girl",
     coverImage: "/images/Prints/6/2gcbg01_mode_modeinformation_modeinfo.webp",
     images: [
       "/images/Prints/6/2gcbg01_mode_modeinformation_modeinfo_1.webp",
@@ -46,7 +47,8 @@ export const printsCatalogs: Catalog[] = [
     ],
   },
   {
-    slug: "ARTS-CRAFTS",
+    slug: "arts-crafts",
+    catalogName: "Arts & Crafts",
     coverImage: "/images/Prints/7/2act01_mode_modeinformation_modeinfo.webp",
     images: [
       "/images/Prints/7/2act01_mode_modeinformation_modeinfo_1.webp",

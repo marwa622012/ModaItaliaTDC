@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import CatalogGallery from "@/components/CatalogGallery";
 import { exclusiveCatalogs } from "@/lib/exclusiveCatalogs";
@@ -6,32 +7,48 @@ interface PageProps {
   params: { slug: string };
 }
 
+function prettify(slug: string) {
+  return slug.replace(/[-_]+/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
 export function generateStaticParams() {
   return exclusiveCatalogs.map((c) => ({ slug: c.slug }));
 }
 
-export function generateMetadata({ params }: PageProps) {
+export function generateMetadata({ params }: PageProps): Metadata {
   const catalog = exclusiveCatalogs.find((c) => c.slug === params.slug);
-  if (!catalog) return {};
+  if (!catalog) return { title: "Catalogue not found" };
+
+  const name = (catalog.catalogName ?? prettify(catalog.slug)).trim();
+  const count = new Set(
+    [catalog.coverImage, ...(catalog.images ?? [])].filter(Boolean),
+  ).size;
 
   return {
-    // title: `${catalog.slug.replace(/-/g, " ")} — Autumn/Winter | Moda Italia`,
-    // description: `Browse the ${catalog.slug.replace(/-/g, " ")} kidswear catalogue from Moda Italia's Autumn/Winter range.`,
+    title: `${name} — Exclusive Catalogue`,
+    description:
+      count > 0
+        ? `Browse ${count} designs from the ${name} exclusive catalogue by Moda Italia TDC.`
+        : `Browse the ${name} exclusive catalogue by Moda Italia TDC.`,
+    alternates: { canonical: `/collections/exclusive/${catalog.slug}` },
   };
 }
 
-export default function KidswearCatalogPage({ params }: PageProps) {
+export default function ExclusiveCatalogPage({ params }: PageProps) {
   const catalog = exclusiveCatalogs.find((c) => c.slug === params.slug);
 
   if (!catalog) return notFound();
 
-  const allImages = [catalog.coverImage, ...(catalog.images ?? [])];
+  // Set عشان صورة الغلاف ما تتكررش لو كانت موجودة كمان في images
+  const allImages = Array.from(
+    new Set([catalog.coverImage, ...(catalog.images ?? [])]),
+  );
 
   return (
     <CatalogGallery
-      categoryLabel="Exclisive"
-      categorySlug="exclisive"
-      catalogName={catalog.slug.replace(/-/g, " ")}
+      categoryLabel="Exclusive"
+      categorySlug="exclusive"
+      catalogName={catalog.catalogName ?? prettify(catalog.slug)}
       images={allImages}
     />
   );

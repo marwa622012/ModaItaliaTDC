@@ -2,7 +2,9 @@ import CategoryCatalogGrid, { Catalog } from "@/components/CategoryCatalogGrid";
 
 export const pantsCatalogs: Catalog[] = [
   {
+    
     slug: "trousering",
+    catalogName: "Trousering",
     coverImage: "/images/pants/pant 1/coper_TROUSER_2048x2048.webp",
     images :  ["/images/pants/pant 1/trousering_830-1_2048x2048.webp",
                 "/images/pants/pant 1/trousering_830-2_2048x2048.webp",
@@ -14,7 +16,8 @@ export const pantsCatalogs: Catalog[] = [
     ],
   },
   {
-    slug: "Street-Wear",
+    slug: "street-wear",
+    catalogName: "Street Wear",
     coverImage: "/images/pants/pant 2/cop_sport_and_street_ba336a11-0ff7-4d2d-bffb-d20fd6f88e0b_2048x2048.webp",
     images :["/images/pants/pant 2/sportstyle-1_2048x2048.webp",
       "/images/pants/pant 2/sportstyle-3_2048x2048.jpg",
@@ -26,11 +29,13 @@ export const pantsCatalogs: Catalog[] = [
     ],
   },
   {
-    slug: "Next-Look-Closeup",
+    slug: "next-look-closeup",
+    catalogName: "Next Look Close-up",
     coverImage: "/images/pants/pant 3/nlcwst15.webp",
   },
   {
     slug: "next-look",
+    catalogName: "Next Look",
     coverImage: "/images/pants/pant 4/nlcwst18.webp",
   },
 ];

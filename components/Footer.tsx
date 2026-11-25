@@ -171,7 +171,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="max-w-content mx-auto px-4 md:px-8 py-5 text-xs text-white/40 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p>© {new Date().getFullYear()} Moda Italia. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Moda Italia. All rights reserved.<Link href="/privacy" className="hover:text-brand-orange">Privacy Policy</Link></p>
         </div>
       </div>
     </footer>

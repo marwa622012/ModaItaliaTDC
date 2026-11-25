@@ -15,6 +15,7 @@ const staticPaths = [
   "/collections",
   "/news",
   "/trade-fairs",
+  "/privacy",
 ];
 
 const collectionSlugs = [

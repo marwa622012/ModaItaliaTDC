@@ -1,15 +1,19 @@
-import CategoryCatalogGrid, { Catalog } from "@/components/CategoryCatalogGrid";
+import type { Metadata } from "next";
+import CategoryCatalogGrid from "@/components/CategoryCatalogGrid";
 import { pantsCatalogs } from "@/lib/pantsCatalogs";
 
+export const metadata: Metadata = {
+  title: "Trousers Collections",
+  description:
+    "Browse trouser fabric and design catalogues curated by Moda Italia TDC.",
+  alternates: { canonical: "/collections/trousers" },
+};
 
-
-export default function pantsPage() {
+export default function TrousersPage() {
   return (
     <CategoryCatalogGrid
       categorySlug="trousers"
       categoryLabel="Trousers"
-      // season="Autumn / Winter"
-      // description="17 designs across four catalogues, from classic tailoring to printed statement pieces."
       catalogs={pantsCatalogs}
     />
   );

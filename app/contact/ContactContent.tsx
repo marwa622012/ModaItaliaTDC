@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+
 
 const upcomingFairs = [
   { city: "CASABLANCA", country: "Apr 2027", rotate: "-rotate-3" },
@@ -124,6 +126,13 @@ export default function ContactContent() {
                 className={`${inputStyles} resize-none`}
               />
             </Field>
+            <p className="text-xs text-black/50">
+                    By sending this message you agree to our{" "}
+                    <Link href="/privacy" className="text-brand-orange hover:underline">
+                      Privacy Policy
+                    </Link>
+                    .
+                  </p>
 
             <button
               type="submit"
@@ -164,6 +173,14 @@ export default function ContactContent() {
           >
             +20 128 669 3375
           </a>
+          <a
+                href="https://wa.me/201286693375"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-brand-black hover:text-brand-orange"
+              >
+                Chat on WhatsApp
+              </a>
         </div>
 
         {upcomingFairs.length > 0 && (

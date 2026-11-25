@@ -22,7 +22,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const count = catalog.images?.length ?? 0;
 
   return {
-    title: `${name} Shirts Collection`,
+    title: `${name} — Shirts Catalogue`,
     description:
       count > 0
         ? `Browse ${count} shirt designs from the ${name} catalogue by Moda Italia TDC.`
