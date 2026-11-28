@@ -1,8 +1,15 @@
 import type { MetadataRoute } from "next";
 import { newsItems } from "./news/data";
 import { shirtsCatalogs } from "@/lib/shirtsCatalogs";
-//  باقي الأقسام
-// import { kidswearCatalogs } from "@/lib/kidswearCatalogs";
+import { kidsCatalogs } from "@/lib/kidsCatalogs";
+import { knittingCatalogs } from "@/lib/knittingCatalogs";
+import { menswearCatalogs } from "@/lib/menswearCatalogs";
+import { pantsCatalogs } from "@/lib/pantsCatalogs";
+import { printsCatalogs } from "@/lib/printsCatalogs";
+import { sportswearCatalogs } from "@/lib/sportswearCatalogs";
+import { suitsCatalogs } from "@/lib/suitsCatalogs";
+import { womenswearCatalogs } from "@/lib/womenswearCatalogs";
+import { exclusiveCatalogs } from "@/lib/exclusiveCatalogs";
 
 // غيّريه لما العميلة تشتري دومين
 const BASE_URL = "https://modaitaliatdc.vercel.app";
@@ -18,19 +25,6 @@ const staticPaths = [
   "/privacy",
 ];
 
-const collectionSlugs = [
-  "shirts",
-  "trousers",
-  "suits",
-  "knitting",
-  "womenswear",
-  "menswear",
-  "kidswear",
-  "sportswear",
-  "prints",
-  "exclusive",
-];
-
 const serviceSlugs = [
   "fashion-trend-design",
   "sourcing-profile",
@@ -39,7 +33,19 @@ const serviceSlugs = [
   "exhibition-partners",
 ];
 
-const fairCountries: string[] = [];
+// كل قسم: اسمه في الرابط + كتالوجاته
+const collections: { slug: string; catalogs: { slug: string }[] }[] = [
+  { slug: "shirts", catalogs: shirtsCatalogs },
+  { slug: "kidswear", catalogs: kidsCatalogs },
+  { slug: "knitting", catalogs: knittingCatalogs },
+  { slug: "menswear", catalogs: menswearCatalogs },
+  { slug: "trousers", catalogs: pantsCatalogs },
+  { slug: "prints", catalogs: printsCatalogs },
+  { slug: "sportswear", catalogs: sportswearCatalogs },
+  { slug: "suits", catalogs: suitsCatalogs },
+  { slug: "womenswear", catalogs: womenswearCatalogs },
+  { slug: "exclusive", catalogs: exclusiveCatalogs },
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -57,11 +63,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticPaths.map((p) => entry(p, p === "" ? 1 : 0.8)),
-    ...collectionSlugs.map((s) => entry(`/collections/${s}`, 0.7)),
-    ...shirtsCatalogs.map((c) => entry(`/collections/shirts/${c.slug}`, 0.6)),
-    // ...kidswearCatalogs.map((c) => entry(`/collections/kidswear/${c.slug}`, 0.6)),
+    ...collections.map((c) => entry(`/collections/${c.slug}`, 0.7)),
+    ...collections.flatMap((c) =>
+      c.catalogs.map((cat) => entry(`/collections/${c.slug}/${cat.slug}`, 0.6)),
+    ),
     ...serviceSlugs.map((s) => entry(`/services/${s}`, 0.7)),
-    ...fairCountries.map((c) => entry(`/trade-fairs/${c}`, 0.6)),
     ...newsItems.map((n) => entry(`/news/${n.slug}`, 0.6, "weekly")),
   ];
 }

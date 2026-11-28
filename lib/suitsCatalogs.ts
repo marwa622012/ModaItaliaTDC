@@ -3,6 +3,7 @@ import CategoryCatalogGrid, { Catalog } from "@/components/CategoryCatalogGrid";
 export const  suitsCatalogs: Catalog[] = [
 {
     slug: "drapperia",
+    catalogName: "Drapperia",
     coverImage: "/images/Suits/Suit 1/copert_drap_AW_2627_2048x2048.webp",
     images : ["/images/Suits/Suit 1/drapperia2627_1_2048x2048.webp",
         "/images/Suits/Suit 1/drapperia2627_2_2048x2048.jpg",
@@ -13,7 +14,8 @@ export const  suitsCatalogs: Catalog[] = [
     ],
 },
 {
-    slug: "Microdesigns",
+    slug: "microdesigns",
+    catalogName: "Micro Designs",
     coverImage: "/images/Suits/Suit 2/copertCREATIVITYformicrod_2048x2048.jpg",
     images :["/images/Suits/Suit 2/Creativitymicrodesigns_1_bd03c8dc-81de-4358-aa72-6aef4cf34771_2048x2048.jpg",
         "/images/Suits/Suit 2/Creativitymicrodesigns_2_2048x2048.jpg",
@@ -22,6 +24,7 @@ export const  suitsCatalogs: Catalog[] = [
 },
 {
     slug: "suiting-patterns",
+    catalogName: "Suiting Patterns",
     coverImage: "/images/Suits/Suit 3/copertsuiting_2048x2048.jpg",
     images :["/images/Suits/Suit 3/suitingpatterns-1_2048x2048.jpg",
         "/images/Suits/Suit 3/suitingpatterns-2_0d8ec087-d44a-419b-967a-54d981d8a076_2048x2048.jpg",
@@ -29,7 +32,8 @@ export const  suitsCatalogs: Catalog[] = [
     ],
 },
 {
-    slug: "secnario",
+    slug: "scenario",
+    catalogName: "Scenario",
     coverImage: "/images/Suits/Suit 4/menswear_scenario_AW_2627_2048x2048.webp",
     images :["/images/Suits/Suit 4/scenariouomo-1_2048x2048.jpg",
         "/images/Suits/Suit 4/scenariouomo-2_2048x2048.webp",
@@ -40,7 +44,8 @@ export const  suitsCatalogs: Catalog[] = [
     ],
 },
 {
-    slug: "Textile-Workshop-Menswear",
+    slug: "textile-workshop-menswear",
+    catalogName: "Textile Workshop Menswear",
     coverImage: "/images/Suits/Suit 5/12d9de_d289803eba924adfaf58cc59d0d64c62~mv2.webp",
     images :["/images/Suits/Suit 5/12d9de_a93ff49c171f43a79affb438f8c7fe80~mv2.webp",
         "/images/Suits/Suit 5/12d9de_1510a9139a8444f0aa7165a6ac6b7a24~mv2.webp",

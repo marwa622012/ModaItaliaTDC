@@ -49,9 +49,9 @@ export default function HomePage() {
         <InternationalTradeFairs />
         <WhyModaItalia />
         <LatestNews />
-      </main>
-      <Newsletter />
-      <Footer />
+        </main>
+        <Newsletter />
+        <Footer />
     </>
   );
 }

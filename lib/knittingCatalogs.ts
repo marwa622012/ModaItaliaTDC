@@ -61,7 +61,7 @@ export const  knittingCatalogs: Catalog[] = [
     ],
   },
   {
-    slug: "womens-knitwear",
+    slug: "womens-knitwear-2",
     coverImage: "/images/knit/knit 7/fbkw2122.webp",
     
   },

@@ -2,7 +2,7 @@ import CategoryCatalogGrid, { Catalog } from "@/components/CategoryCatalogGrid";
 
 export const womenswearCatalogs: Catalog[] = [
   {
-    slug: "Womens-wear-summer",
+    slug: "womens-wear-summer",
     coverImage: "/images/WomensWear/1/copertwomensSS26_720x.webp",
     images: [
       "/images/WomensWear/1/womenswear_1-14SS26_720x.webp",
@@ -17,7 +17,7 @@ export const womenswearCatalogs: Catalog[] = [
     ],
   },
   {
-    slug: "JACQUARDS",
+    slug: "jacquards",
     coverImage: "/images/WomensWear/2/jacquard_720x.webp",
     images: [
       "/images/WomensWear/2/jacquard2627-10_720x.webp",
@@ -33,7 +33,7 @@ export const womenswearCatalogs: Catalog[] = [
     ],
   },
   {
-    slug: "Women-Wear-Winter",
+    slug: "women-wear-winter",
     coverImage: "/images/WomensWear/3/copertwomenswear_720x.webp",
     images: [
       "/images/WomensWear/3/womenswear2627-10_720x.webp",
@@ -48,7 +48,7 @@ export const womenswearCatalogs: Catalog[] = [
     ],
   },
   {
-    slug: "Style-Right",
+    slug: "style-right",
     coverImage:
       "/images/WomensWear/4/styleright-women-ss-2026-tendenze-moda-donna-cover.png",
 
@@ -64,7 +64,7 @@ export const womenswearCatalogs: Catalog[] = [
     ],
   },
   {
-    slug: "Next-look",
+    slug: "next-look",
     coverImage:
       "/images/WomensWear/5/next-look-women-tendenze-moda-donna-aw-25-26_1.jpg",
     images: [
@@ -79,12 +79,12 @@ export const womenswearCatalogs: Catalog[] = [
     ],
   },
   {
-    slug: "Chiron",
+    slug: "chiron",
     coverImage:
       "/images/WomensWear/6/26_2_caleidoscopio_coverpage_modeinfo(4).jpg",
   },
   {
-    slug: "Color-ESSENCE",
+    slug: "color-essence",
     coverImage: "/images/WomensWear/7/cew2627.jpg",
   },
 ];

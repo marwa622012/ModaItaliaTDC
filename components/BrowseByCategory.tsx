@@ -35,7 +35,7 @@ const categories = [
   {
     name: "Prints",
     slug: "prints",
-    image: "/images/trends-books/print.webp",
+    image: "/images/trends-books/prints.webp",
   },
   {
     name: "Shirts",

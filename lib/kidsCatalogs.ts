@@ -3,7 +3,7 @@ import { Catalog } from "@/components/CategoryCatalogGrid";
 export const kidsCatalogs: Catalog[] = [
 { slug: "kids-youth", coverImage: "/images/Kidswear/1/converted_image.webp" },
 { slug: "kids-trend", coverImage: "/images/Kidswear/2/srkt2627.webp" },
-{ slug: "NEWBORN-BABY", coverImage: "/images/Kidswear/3/bcnb2627.webp" },
+{ slug: "newborn-baby", coverImage: "/images/Kidswear/3/bcnb2627.webp" },
 { slug: "baby-trend", coverImage: "/images/Kidswear/4/srbt2627.webp" },
 { slug: "baby-graphics", coverImage: "/images/Kidswear/5/srb2627.webp" },
 { slug: "kids-graphics", coverImage: "/images/Kidswear/6/srkg2627-1.webp" },
